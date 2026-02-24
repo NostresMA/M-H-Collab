@@ -1,0 +1,33 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@layer utilities {
+  .glass {
+    @apply bg-white/55 backdrop-blur-[20px] border border-white/40 shadow-lg shadow-sage-400/5;
+  }
+  .glass-sage {
+    @apply bg-sage-100/40 backdrop-blur-[20px] border border-sage-200/30 shadow-lg shadow-sage-400/5;
+  }
+  .glass-dark {
+    @apply bg-navy-500/80 backdrop-blur-[20px] border border-white/10 shadow-xl;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-cream-100 text-navy-400 font-sans antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif text-navy-500;
+}
