@@ -102,22 +102,15 @@ export function FooterUA() {
             </h4>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="tel:+380969453153"
                 aria-label="LinkedIn"
                 className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-sage-400 hover:border-sage-400/30 transition-all">
 
                 <Phone size={18} />
               </a>
               <a
-                href="#"
+                href="mailto:collab@snu.agency"
                 aria-label="Instagram"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-sage-400 hover:border-sage-400/30 transition-all">
-
-                <Mail size={18} />
-              </a>
-              <a
-                href="#"
-                aria-label="Email"
                 className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-sage-400 hover:border-sage-400/30 transition-all">
 
                 <Mail size={18} />
