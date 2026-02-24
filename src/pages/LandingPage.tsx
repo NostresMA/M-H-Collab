@@ -9,10 +9,13 @@ import { TestimonialsSection } from '../components/TestimonialsSection';
 import { ImpactSection } from '../components/ImpactSection';
 import { CTASection } from '../components/CTASection';
 import { Footer } from '../components/Footer';
-export function LandingPage() {
+interface LandingPageProps {
+  onLanguageChange: (lang: 'en' | 'ua') => void;
+}
+export function LandingPage({ onLanguageChange }: LandingPageProps) {
   return (
     <div className="min-h-screen bg-cream-100 selection:bg-sage-200 selection:text-navy-500">
-      <Navbar />
+      <Navbar onLanguageChange={onLanguageChange} />
       <main>
         <HeroSection />
         <MissionSection />

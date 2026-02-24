@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-interface NavbarProps {
-  onLanguageChange?: (lang: 'en' | 'ua') => void;
+import { Menu, X, Globe } from 'lucide-react';
+interface NavbarUAProps {
+  onLanguageChange: (lang: 'en' | 'ua') => void;
 }
-export function Navbar({ onLanguageChange }: NavbarProps) {
+export function NavbarUA({ onLanguageChange }: NavbarUAProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -32,19 +32,19 @@ export function Navbar({ onLanguageChange }: NavbarProps) {
   }, []);
   const navLinks = [
   {
-    name: 'Mission',
+    name: 'Місія',
     href: '#mission'
   },
   {
-    name: 'Services',
+    name: 'Послуги',
     href: '#services'
   },
   {
-    name: 'Approach',
+    name: 'Підхід',
     href: '#approach'
   },
   {
-    name: 'Impact',
+    name: 'Вплив',
     href: '#impact'
   }];
 
@@ -86,14 +86,14 @@ export function Navbar({ onLanguageChange }: NavbarProps) {
 
             {/* Language Switcher */}
             <div className="flex items-center space-x-2 border-l border-navy-500/10 pl-6 ml-2">
-              <button className="text-sm font-bold text-navy-500" disabled>
+              <button
+                onClick={() => onLanguageChange('en')}
+                className="text-sm font-medium text-navy-400/60 hover:text-navy-500 transition-colors">
+
                 EN
               </button>
               <span className="text-navy-400/30">/</span>
-              <button
-                onClick={() => onLanguageChange && onLanguageChange('ua')}
-                className="text-sm font-medium text-navy-400/60 hover:text-navy-500 transition-colors">
-
+              <button className="text-sm font-bold text-navy-500" disabled>
                 UA
               </button>
             </div>
@@ -102,21 +102,21 @@ export function Navbar({ onLanguageChange }: NavbarProps) {
               href="#contact"
               className="px-5 py-2.5 bg-navy-500 text-white text-sm font-medium rounded-full hover:bg-navy-400 transition-colors duration-300 shadow-lg shadow-navy-500/20">
 
-              Get in Touch
+              Зв'язатися
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
             <div className="flex items-center space-x-2">
-              <span className="text-xs font-bold text-navy-500">EN</span>
-              <span className="text-navy-400/30 text-xs">/</span>
               <button
-                onClick={() => onLanguageChange && onLanguageChange('ua')}
+                onClick={() => onLanguageChange('en')}
                 className="text-xs font-medium text-navy-400/60">
 
-                UA
+                EN
               </button>
+              <span className="text-navy-400/30 text-xs">/</span>
+              <span className="text-xs font-bold text-navy-500">UA</span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -161,7 +161,7 @@ export function Navbar({ onLanguageChange }: NavbarProps) {
           className="w-full text-center px-5 py-3 bg-navy-500 text-white font-medium rounded-lg hover:bg-navy-400 transition-colors"
           onClick={() => setIsMobileMenuOpen(false)}>
 
-            Get in Touch
+            Зв'язатися
           </a>
         </motion.div>
       }
