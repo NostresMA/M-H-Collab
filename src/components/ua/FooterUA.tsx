@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Instagram, Mail, ExternalLink } from 'lucide-react';
+import { Phone, Mail, ExternalLink } from 'lucide-react';
 export function FooterUA() {
   return (
     <footer className="bg-navy-500 text-white/80 pt-16 pb-8">
@@ -106,14 +106,14 @@ export function FooterUA() {
                 aria-label="LinkedIn"
                 className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-sage-400 hover:border-sage-400/30 transition-all">
 
-                <Linkedin size={18} />
+                <Phone size={18} />
               </a>
               <a
                 href="#"
                 aria-label="Instagram"
                 className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-sage-400 hover:border-sage-400/30 transition-all">
 
-                <Instagram size={18} />
+                <Mail size={18} />
               </a>
               <a
                 href="#"

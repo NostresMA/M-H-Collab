@@ -18,7 +18,7 @@ const trustPoints = [
 },
 {
   number: '2',
-  caption: 'Засновані / керовані НУО в нашому портфоліо',
+  caption: 'Засновані / керовані ГО в нашому портфоліо',
   icon: Building2,
   accentColor: 'bg-navy-400/5',
   iconColor: 'text-navy-400/20'

@@ -34,14 +34,13 @@ export function CTASectionUA() {
           </div>
 
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-navy-500 mb-6 leading-tight">
-            Готові масштабувати свій{' '}
-            <span className="text-sage-400 italic">вплив</span>?
+            Готові до технологічного стрибка{' '}
+            <span className="text-sage-400 italic">у вашій діяльності?</span>
           </h2>
 
           <p className="text-lg md:text-xl text-navy-400 mb-12 max-w-xl mx-auto leading-relaxed">
-            Ми шукаємо обмежену кількість партнерів для нашої пілотної фази.
-            Якщо ваша робота зосереджена на ментальному здоров'ї та
-            благополуччі, ми будемо раді почути вас.
+            Це експериментальний проєкт, тому ми шукаємо обмежену кількість
+            партнерів для пілотних запусків на особливих умовах.
           </p>
 
           <motion.div

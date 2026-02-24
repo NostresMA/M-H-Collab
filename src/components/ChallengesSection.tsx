@@ -9,6 +9,12 @@ import {
 export function ChallengesSection() {
   const challenges = [
   {
+    icon: ThermometerSnowflake,
+    title: 'Fear of Cold Technology',
+    description:
+    'Digital tools often feel sterile and impersonal. We design with warmth to prevent the risk of re-traumatization and ensure users feel safe.'
+  },
+  {
     icon: FileStack,
     title: 'Administrative Overload',
     description:
@@ -19,12 +25,6 @@ export function ChallengesSection() {
     title: 'Outdated Brand Identity',
     description:
     'Trust is the currency of mental health. An outdated digital presence can inadvertently signal a lack of modern, effective care methodologies.'
-  },
-  {
-    icon: ThermometerSnowflake,
-    title: 'Fear of Cold Technology',
-    description:
-    'Digital tools often feel sterile and impersonal. We design with warmth to prevent the risk of re-traumatization and ensure users feel safe.'
   },
   {
     icon: MessageSquareWarning,

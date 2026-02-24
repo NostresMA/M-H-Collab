@@ -86,15 +86,15 @@ export function Navbar({ onLanguageChange }: NavbarProps) {
 
             {/* Language Switcher */}
             <div className="flex items-center space-x-2 border-l border-navy-500/10 pl-6 ml-2">
-              <button className="text-sm font-bold text-navy-500" disabled>
-                EN
-              </button>
-              <span className="text-navy-400/30">/</span>
               <button
                 onClick={() => onLanguageChange && onLanguageChange('ua')}
                 className="text-sm font-medium text-navy-400/60 hover:text-navy-500 transition-colors">
 
                 UA
+              </button>
+              <span className="text-navy-400/30">/</span>
+              <button className="text-sm font-bold text-navy-500" disabled>
+                EN
               </button>
             </div>
 
@@ -109,14 +109,14 @@ export function Navbar({ onLanguageChange }: NavbarProps) {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
             <div className="flex items-center space-x-2">
-              <span className="text-xs font-bold text-navy-500">EN</span>
-              <span className="text-navy-400/30 text-xs">/</span>
               <button
                 onClick={() => onLanguageChange && onLanguageChange('ua')}
                 className="text-xs font-medium text-navy-400/60">
 
                 UA
               </button>
+              <span className="text-navy-400/30 text-xs">/</span>
+              <span className="text-xs font-bold text-navy-500">EN</span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

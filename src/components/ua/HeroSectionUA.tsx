@@ -74,7 +74,7 @@ export function HeroSectionUA() {
               }}
               className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-navy-500 leading-[1.1] mb-6 text-balance">
 
-              Трансформуємо послуги ментального здоров'я за допомогою{' '}
+              Трансформуємо сервіси ментального здоров'я за допомогою{' '}
               <span className="text-sage-400 italic">Стратегії та ШІ</span>
             </motion.h1>
 
@@ -94,10 +94,9 @@ export function HeroSectionUA() {
               }}
               className="text-lg text-navy-400 max-w-xl mb-10 leading-relaxed">
 
-              Поєднуючи доказові моделі допомоги LoveElement з можливостями
-              стратегічного ШІ від Star&Unicorn, ми створюємо цифрові
-              екосистеми, які є водночас технологічно досконалими та глибоко
-              людяними.
+              Поєднуємо травмаінформований підхід та технологічні можливості.
+              Допомагаємо організаціям масштабувати допомогу, автоматизувати
+              процеси та створювати бренди, яким довіряють.
             </motion.p>
 
             <motion.div
@@ -120,12 +119,14 @@ export function HeroSectionUA() {
                 href="#contact"
                 className="group px-8 py-4 bg-navy-500 text-white rounded-full font-medium text-lg transition-all duration-300 hover:bg-navy-400 hover:shadow-xl hover:shadow-navy-500/20 flex items-center justify-center whitespace-nowrap shrink-0">
 
-                Записатися на сесію
+                Записатися на діагностичну сесію
               </a>
 
               <div className="flex items-center text-navy-400/70 text-sm font-medium whitespace-nowrap">
                 <Clock className="w-4 h-4 mr-2" />
-                <span>30-хвилинна безкоштовна консультація</span>
+                <span>
+                  Обговоримо ваш проєкт та знайдемо точки росту за 30 хвилин.
+                </span>
               </div>
             </motion.div>
           </div>
@@ -260,10 +261,10 @@ export function HeroSectionUA() {
                 className="relative z-10 flex flex-col items-center text-center">
 
                 <span className="text-xl font-serif font-bold italic text-navy-500/50 leading-tight tracking-wide">
-                  Social
+                  Соціальні
                 </span>
                 <span className="text-xl font-serif font-bold italic text-navy-500/50 leading-tight tracking-wide">
-                  Services
+                  Сервіси
                 </span>
               </motion.div>
             </motion.div>
