@@ -258,14 +258,21 @@ export function HeroSectionUA() {
                   repeat: 999,
                   ease: 'easeInOut'
                 }}
-                className="relative z-10 flex flex-col items-center text-center">
+                className="relative z-10 flex flex-col items-center text-center gap-3">
 
-                <span className="text-xl font-serif font-bold italic text-navy-500/50 leading-tight tracking-wide">
-                  Соціальні
-                </span>
-                <span className="text-xl font-serif font-bold italic text-navy-500/50 leading-tight tracking-wide">
-                  Сервіси
-                </span>
+                <img
+                  src="/logo_mhc.png"
+                  alt="MHC Logo"
+                  className="w-20 h-20 object-contain opacity-70" />
+
+                <div className="flex flex-col items-center leading-tight">
+                  <span className="text-xl font-serif font-bold italic text-navy-500/50 tracking-wide">
+                    Соціальні
+                  </span>
+                  <span className="text-xl font-serif font-bold italic text-navy-500/50 tracking-wide">
+                    Сервіси
+                  </span>
+                </div>
               </motion.div>
             </motion.div>
 
