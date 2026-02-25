@@ -263,7 +263,7 @@ export function HeroSectionUA() {
                 className="relative z-10 flex flex-col items-center text-center gap-3">
 
                 <img
-                  src="/logo_mhc.png"
+                  src="/favicon2.png"
                   alt="MHC Logo"
                   className="w-20 h-20 object-contain opacity-70" />
 
