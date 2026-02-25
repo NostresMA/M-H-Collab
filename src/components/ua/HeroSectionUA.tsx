@@ -36,7 +36,7 @@ export function HeroSectionUA() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column: Content */}
-          <div className="flex flex-col items-start text-left pt-10 lg:pt-0">
+          <div className="flex flex-col items-start text-left pt-10 lg:pt-0 min-w-0">
             <motion.div
               initial={{
                 opacity: 0,
@@ -50,10 +50,10 @@ export function HeroSectionUA() {
                 duration: 0.6,
                 ease: 'easeOut'
               }}
-              className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-sage-100/50 border border-sage-200/50 backdrop-blur-sm mb-8">
+              className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-sage-100/50 border border-sage-200/50 backdrop-blur-sm mb-8 max-w-full">
 
-              <Sparkles className="w-4 h-4 text-sage-400" />
-              <span className="text-sm font-medium text-navy-400 tracking-wide uppercase">
+              <Sparkles className="w-4 h-4 text-sage-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-medium text-navy-400 tracking-wide uppercase">
                 Партнерство Love Element × Star&Unicorn
               </span>
             </motion.div>
@@ -72,7 +72,7 @@ export function HeroSectionUA() {
                 delay: 0.2,
                 ease: 'easeOut'
               }}
-              className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-navy-500 leading-[1.1] mb-6 text-balance">
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-navy-500 leading-[1.1] mb-6 text-balance">
 
               Трансформуємо сервіси ментального здоров'я за допомогою{' '}
               <span className="text-sage-400 italic">Стратегії та ШІ</span>
@@ -113,17 +113,19 @@ export function HeroSectionUA() {
                 delay: 0.6,
                 ease: 'easeOut'
               }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full">
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full">
 
               <a
-                href="#contact"
-                className="group px-8 py-4 bg-navy-500 text-white rounded-full font-medium text-lg transition-all duration-300 hover:bg-navy-400 hover:shadow-xl hover:shadow-navy-500/20 flex items-center justify-center whitespace-nowrap shrink-0">
+                href="https://widget.easyweek.com.ua/love-element/team/152718/264489"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-6 sm:px-8 py-3 sm:py-4 bg-navy-500 text-white rounded-full font-medium text-base sm:text-lg transition-all duration-300 hover:bg-navy-400 hover:shadow-xl hover:shadow-navy-500/20 flex items-center justify-center text-center shrink-0">
 
                 Записатися на діагностичну сесію
               </a>
 
-              <div className="flex items-center text-navy-400/70 text-sm font-medium whitespace-nowrap">
-                <Clock className="w-4 h-4 mr-2" />
+              <div className="flex items-start sm:items-center text-navy-400/70 text-sm font-medium">
+                <Clock className="w-4 h-4 mr-2 mt-0.5 sm:mt-0 flex-shrink-0" />
                 <span>
                   Обговоримо ваш проєкт та знайдемо точки росту за 30 хвилин.
                 </span>

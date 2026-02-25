@@ -61,7 +61,9 @@ export function CTASectionUA() {
             className="flex flex-col items-center gap-4">
 
             <a
-              href="#"
+              href="https://widget.easyweek.com.ua/love-element/team/152718/264489"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center px-10 py-5 bg-navy-500 text-white rounded-full font-medium text-lg transition-all duration-300 hover:bg-navy-400 hover:shadow-2xl hover:shadow-navy-500/25">
 
               Забронювати консультацію

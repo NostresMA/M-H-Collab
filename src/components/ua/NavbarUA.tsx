@@ -85,7 +85,9 @@ export function NavbarUA({ onLanguageChange }: NavbarUAProps) {
             )}
 
             <a
-              href="#contact"
+              href="https://widget.easyweek.com.ua/love-element/team/152718/264489"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2.5 bg-navy-500 text-white text-sm font-medium rounded-full hover:bg-navy-400 transition-colors duration-300 shadow-lg shadow-navy-500/20">
 
               Зв'язатися
