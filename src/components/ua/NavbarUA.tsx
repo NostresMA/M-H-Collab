@@ -84,20 +84,6 @@ export function NavbarUA({ onLanguageChange }: NavbarUAProps) {
               </a>
             )}
 
-            {/* Language Switcher */}
-            <div className="flex items-center space-x-2 border-l border-navy-500/10 pl-6 ml-2">
-              <button className="text-sm font-bold text-navy-500" disabled>
-                UA
-              </button>
-              <span className="text-navy-400/30">/</span>
-              <button
-                onClick={() => onLanguageChange('en')}
-                className="text-sm font-medium text-navy-400/60 hover:text-navy-500 transition-colors">
-
-                EN
-              </button>
-            </div>
-
             <a
               href="#contact"
               className="px-5 py-2.5 bg-navy-500 text-white text-sm font-medium rounded-full hover:bg-navy-400 transition-colors duration-300 shadow-lg shadow-navy-500/20">
@@ -108,16 +94,6 @@ export function NavbarUA({ onLanguageChange }: NavbarUAProps) {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
-            <div className="flex items-center space-x-2">
-              <span className="text-xs font-bold text-navy-500">UA</span>
-              <span className="text-navy-400/30 text-xs">/</span>
-              <button
-                onClick={() => onLanguageChange('en')}
-                className="text-xs font-medium text-navy-400/60">
-
-                EN
-              </button>
-            </div>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-navy-500 p-2"

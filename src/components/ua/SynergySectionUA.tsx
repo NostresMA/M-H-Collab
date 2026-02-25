@@ -124,9 +124,17 @@ export function SynergySectionUA() {
                 Мозок
               </span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3">
-              Star&Unicorn
-            </h3>
+            <a
+              href="https://snu.agency"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <img
+                src="/3_2_SU_Logo_Horizontal_Full_Cyr_P.png"
+                alt="Star&Unicorn"
+                className="h-12 md:h-16 object-contain mb-3 mt-[20px]" />
+
+            </a>
             <p className="text-white/60 leading-relaxed mb-8 text-sm">
               Експерти в маркетингу, автоматизації та проєктуванні ШІ-агентів.
               Відповідають за «двигун» вашого проєкту.
@@ -189,9 +197,18 @@ export function SynergySectionUA() {
                 Серце
               </span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy-500 mb-3">
-              LoveElement
-            </h3>
+            <a
+              href="https://love-element.com"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <img
+                src="/Love_Element_Logo_purple.png"
+                alt="LoveElement"
+                className="h-12 md:h-16 object-contain mb-3 pt-[0px] mt-[20px]" />
+
+            </a>
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy-500 mb-3"></h3>
             <p className="text-navy-400 leading-relaxed mb-8 text-sm">
               Проєкт про усвідомлений розвиток та травмаінформований підхід.
               Відповідають за «душу» та етичність рішень.
