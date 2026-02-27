@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Clock, Heart, Mail, Table2 } from 'lucide-react';
+import { Sparkles, Clock, Heart, Mail, Table2 } from 'lucide-react';
+import { trackBookingClick } from '../services/tracking';
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20 lg:pt-0">
@@ -117,7 +117,10 @@ export function HeroSection() {
               className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full">
 
               <a
-                href="#contact"
+                href="https://widget.easyweek.com.ua/love-element/team/152718/264489"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackBookingClick({ lang: 'en', context: 'Hero Section' })}
                 className="group px-8 py-4 bg-navy-500 text-white rounded-full font-medium text-lg transition-all duration-300 hover:bg-navy-400 hover:shadow-xl hover:shadow-navy-500/20 flex items-center justify-center whitespace-nowrap shrink-0">
 
                 Book a Session
@@ -244,7 +247,7 @@ export function HeroSection() {
                 className="absolute inset-0 opacity-10"
                 style={{
                   backgroundImage:
-                  'radial-gradient(circle, #1B2A4A 1px, transparent 1px)',
+                    'radial-gradient(circle, #1B2A4A 1px, transparent 1px)',
                   backgroundSize: '20px 20px'
                 }} />
 

@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { trackBookingClick } from '../../services/tracking';
 export function CTASectionUA() {
   return (
     <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
@@ -64,6 +64,7 @@ export function CTASectionUA() {
               href="https://widget.easyweek.com.ua/love-element/team/152718/264489"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackBookingClick({ context: 'CTA Section UA' })}
               className="group inline-flex items-center justify-center px-10 py-5 bg-navy-500 text-white rounded-full font-medium text-lg transition-all duration-300 hover:bg-navy-400 hover:shadow-2xl hover:shadow-navy-500/25">
 
               Забронювати консультацію
