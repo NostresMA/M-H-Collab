@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
@@ -135,7 +135,8 @@ export function TestimonialsSectionUA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="min-w-[320px] md:min-w-[420px] max-w-[420px] h-[400px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between"
+              onClick={() => testimonial.quote.length > 200 && setSelectedTestimonial(testimonial)}
+              className={`min-w-[320px] md:min-w-[420px] max-w-[420px] h-[400px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between transition-all duration-300 ${testimonial.quote.length > 200 ? 'cursor-pointer hover:bg-white/40 hover:shadow-xl hover:-translate-y-1' : ''}`}
             >
               <div className="flex-1 overflow-hidden">
                 <Quote size={32} className="text-sage-400/40 mb-6" strokeWidth={1.5} />
@@ -143,16 +144,6 @@ export function TestimonialsSectionUA() {
                   <p className="font-serif text-navy-500 text-lg md:text-xl leading-relaxed italic line-clamp-6">
                     "{testimonial.quote}"
                   </p>
-                  {testimonial.quote.length > 200 && (
-                    <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white/80 to-transparent flex items-end justify-center pb-1">
-                      <button
-                        onClick={() => setSelectedTestimonial(testimonial)}
-                        className="text-sage-500 font-medium text-sm hover:underline"
-                      >
-                        Читати повністю
-                      </button>
-                    </div>
-                  )}
                 </div>
               </div>
 

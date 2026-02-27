@@ -1,35 +1,35 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 const testimonials = [
-{
-  quote:
-  'For the first time, our digital tools feel like an extension of our therapeutic space — not a disruption to it. The care that went into every interaction detail is remarkable.',
-  name: 'Dr. Elena Vasquez',
-  role: 'Clinical Psychologist',
-  initials: 'EV'
-},
-{
-  quote:
-  'The trauma-informed training transformed how our entire team thinks about technology. We went from anxious about digital adoption to genuinely excited about the possibilities.',
-  name: 'Dr. Marcus Chen',
-  role: 'Trauma Specialist & Supervisor',
-  initials: 'MC'
-},
-{
-  quote:
-  "Our client portal has a 94% adoption rate — unheard of in our field. Parents tell us it feels safe and intuitive. That's not an accident, it's intentional design.",
-  name: 'Dr. Sarah Okonkwo',
-  role: 'Child & Adolescent Psychologist',
-  initials: 'SO'
-},
-{
-  quote:
-  "They didn't just redesign our brand — they helped us articulate our value in a way that resonates. Referrals increased 40% within three months of launching our new identity.",
-  name: 'Dr. James Hartley',
-  role: 'Practice Director, Hartley & Associates',
-  initials: 'JH'
-}];
+  {
+    quote:
+      'For the first time, our digital tools feel like an extension of our therapeutic space — not a disruption to it. The care that went into every interaction detail is remarkable.',
+    name: 'Dr. Elena Vasquez',
+    role: 'Clinical Psychologist',
+    initials: 'EV'
+  },
+  {
+    quote:
+      'The trauma-informed training transformed how our entire team thinks about technology. We went from anxious about digital adoption to genuinely excited about the possibilities.',
+    name: 'Dr. Marcus Chen',
+    role: 'Trauma Specialist & Supervisor',
+    initials: 'MC'
+  },
+  {
+    quote:
+      "Our client portal has a 94% adoption rate — unheard of in our field. Parents tell us it feels safe and intuitive. That's not an accident, it's intentional design.",
+    name: 'Dr. Sarah Okonkwo',
+    role: 'Child & Adolescent Psychologist',
+    initials: 'SO'
+  },
+  {
+    quote:
+      "They didn't just redesign our brand — they helped us articulate our value in a way that resonates. Referrals increased 40% within three months of launching our new identity.",
+    name: 'Dr. James Hartley',
+    role: 'Practice Director, Hartley & Associates',
+    initials: 'JH'
+  }];
 
 export function TestimonialsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -42,8 +42,8 @@ export function TestimonialsSection() {
     setCanScrollLeft(el.scrollLeft > 10);
     setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
     const cardWidth = el.firstElementChild ?
-    (el.firstElementChild as HTMLElement).offsetWidth + 24 :
-    400;
+      (el.firstElementChild as HTMLElement).offsetWidth + 24 :
+      400;
     setActiveIndex(Math.round(el.scrollLeft / cardWidth));
   };
   useEffect(() => {
@@ -59,8 +59,8 @@ export function TestimonialsSection() {
     const el = scrollRef.current;
     if (!el) return;
     const cardWidth = el.firstElementChild ?
-    (el.firstElementChild as HTMLElement).offsetWidth + 24 :
-    400;
+      (el.firstElementChild as HTMLElement).offsetWidth + 24 :
+      400;
     el.scrollBy({
       left: direction === 'left' ? -cardWidth : cardWidth,
       behavior: 'smooth'
@@ -158,30 +158,30 @@ export function TestimonialsSection() {
           }}>
 
           {testimonials.map((testimonial, index) =>
-          <motion.div
-            key={index}
-            initial={{
-              opacity: 0,
-              y: 30
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.1
-            }}
-            className="min-w-[320px] md:min-w-[420px] max-w-[420px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between">
+            <motion.div
+              key={index}
+              initial={{
+                opacity: 0,
+                y: 30
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0
+              }}
+              viewport={{
+                once: true
+              }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1
+              }}
+              className="min-w-[320px] md:min-w-[420px] max-w-[420px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between">
 
               <div>
                 <Quote
-                size={32}
-                className="text-sage-400/40 mb-6"
-                strokeWidth={1.5} />
+                  size={32}
+                  className="text-sage-400/40 mb-6"
+                  strokeWidth={1.5} />
 
                 <p className="font-serif text-navy-500 text-lg md:text-xl leading-relaxed italic mb-8">
                   "{testimonial.quote}"
@@ -206,9 +206,9 @@ export function TestimonialsSection() {
         {/* Dot Indicators (mobile) */}
         <div className="flex md:hidden justify-center gap-2 mt-6">
           {testimonials.map((_, index) =>
-          <div
-            key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'bg-sage-400 w-6' : 'bg-sage-400/25'}`} />
+            <div
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'bg-sage-400 w-6' : 'bg-sage-400/25'}`} />
 
           )}
         </div>
