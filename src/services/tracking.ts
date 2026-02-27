@@ -4,7 +4,7 @@
  */
 
 // Placeholder URL - will be updated after deployment
-const TRACKING_URL = 'YOUR_DEPLOYED_APPS_SCRIPT_URL';
+const TRACKING_URL = 'https://script.google.com/macros/s/AKfycbxBxhmp6ERPbR5E7pcewA134JFXLxNWA1LQT8okhPwcNPd51FVtobdyK9SlKqEUeQLqww/exec';
 
 interface TrackingData {
     event?: string;
