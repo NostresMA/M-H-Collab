@@ -12,9 +12,10 @@ import { FooterUA } from '../components/ua/FooterUA';
 interface LandingPageUAProps {
   onLanguageChange: (lang: 'en' | 'ua') => void;
 }
-export function LandingPageUA({ onLanguageChange }: LandingPageUAProps) {
-  return (
-    <div className="min-h-screen bg-cream-100 selection:bg-sage-200 selection:text-navy-500">
+export function LandingPageUA({
+  onLanguageChange
+}: LandingPageUAProps) {
+  return <div className="min-h-screen bg-cream-100 selection:bg-sage-200 selection:text-navy-500">
       <NavbarUA onLanguageChange={onLanguageChange} />
       <main>
         <HeroSectionUA />
@@ -27,6 +28,5 @@ export function LandingPageUA({ onLanguageChange }: LandingPageUAProps) {
         <CTASectionUA />
       </main>
       <FooterUA />
-    </div>);
-
+    </div>;
 }

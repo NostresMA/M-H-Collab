@@ -12,9 +12,10 @@ import { Footer } from '../components/Footer';
 interface LandingPageProps {
   onLanguageChange: (lang: 'en' | 'ua') => void;
 }
-export function LandingPage({ onLanguageChange }: LandingPageProps) {
-  return (
-    <div className="min-h-screen bg-cream-100 selection:bg-sage-200 selection:text-navy-500">
+export function LandingPage({
+  onLanguageChange
+}: LandingPageProps) {
+  return <div className="min-h-screen bg-cream-100 selection:bg-sage-200 selection:text-navy-500">
       <Navbar onLanguageChange={onLanguageChange} />
       <main>
         <HeroSection />
@@ -27,6 +28,5 @@ export function LandingPage({ onLanguageChange }: LandingPageProps) {
         <CTASection />
       </main>
       <Footer />
-    </div>);
-
+    </div>;
 }
