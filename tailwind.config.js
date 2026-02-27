@@ -9,13 +9,13 @@ export default {
     extend: {
       colors: {
         sage: {
-          100: '#E8F0EA',
-          200: '#C8DCC9',
-          400: '#7C9A82',
+          100: '#FFE8F5',
+          200: '#FFC8E8',
+          400: '#FF50AA',
         },
         navy: {
-          400: '#2D4066',
-          500: '#1B2A4A',
+          400: '#4560E0',
+          500: '#3246C8',
         },
         cream: {
           100: '#FAF8F5',
