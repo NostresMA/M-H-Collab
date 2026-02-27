@@ -2,23 +2,28 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 export function CTASection() {
-  return <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
+  return (
+    <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
       {/* Soft gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-cream-100 via-sage-100/20 to-sage-100/40 -z-10" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sage-400/8 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.8
-      }}>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0
+          }}
+          viewport={{
+            once: true
+          }}
+          transition={{
+            duration: 0.8
+          }}>
 
           {/* Exclusivity badge */}
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-warm-400/10 border border-warm-400/20 mb-10">
@@ -39,19 +44,26 @@ export function CTASection() {
             hear from you.
           </p>
 
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          delay: 0.3
-        }} className="flex flex-col items-center gap-4">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
+            viewport={{
+              once: true
+            }}
+            transition={{
+              delay: 0.3
+            }}
+            className="flex flex-col items-center gap-4">
 
-            <a href="#" className="group inline-flex items-center justify-center px-10 py-5 bg-navy-500 text-white rounded-full font-medium text-lg transition-all duration-300 hover:bg-navy-400 hover:shadow-2xl hover:shadow-navy-500/25">
+            <a
+              href="#"
+              className="group inline-flex items-center justify-center px-10 py-5 bg-navy-500 text-white rounded-full font-medium text-lg transition-all duration-300 hover:bg-navy-400 hover:shadow-2xl hover:shadow-navy-500/25">
 
               Secure Your Consultation
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -62,5 +74,6 @@ export function CTASection() {
           </motion.div>
         </motion.div>
       </div>
-    </section>;
+    </section>);
+
 }

@@ -3,7 +3,13 @@ import { LandingPage } from './pages/LandingPage';
 import { LandingPageUA } from './pages/LandingPageUA';
 export function App() {
   const [lang, setLang] = useState<'en' | 'ua'>('ua');
-  return <>
-      {lang === 'en' ? <LandingPage onLanguageChange={setLang} /> : <LandingPageUA onLanguageChange={setLang} />}
-    </>;
+  return (
+    <>
+      {lang === 'en' ?
+      <LandingPage onLanguageChange={setLang} /> :
+
+      <LandingPageUA onLanguageChange={setLang} />
+      }
+    </>);
+
 }

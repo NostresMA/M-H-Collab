@@ -1,27 +1,29 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-const testimonials = [{
-  quote: 'Вперше наші цифрові інструменти відчуваються як продовження нашого терапевтичного простору, а не як перешкода для нього. Увага до кожної деталі взаємодії просто вражає.',
-  name: 'Д-р Олена Васкес',
-  role: 'Клінічний психолог',
-  initials: 'ОВ'
-}, {
-  quote: 'Brand Lifting допоміг нам нарешті заговорити з аудиторією мовою, яка викликає довіру, а не тривогу. Консультації з травмаінформованості стали фундаментом для нашої нової комунікаційної стратегії.',
+const testimonials = [
+{
+  quote:
+  'Brand Lifting допоміг нам нарешті заговорити з аудиторією мовою, яка викликає довіру, а не тривогу. Консультації з травмаінформованості стали фундаментом для нашої нової комунікаційної стратегії.',
   name: 'Д-р Маркус Чен',
   role: 'Керівник психологічного центру',
   initials: 'МЧ'
-}, {
-  quote: 'Найцінніше в цій колаборації — це розуміння контексту. Команда Star&Unicorn та LoveElement знає, як працювати з чутливими темами в Україні сьогодні. Це інновації з людським обличчям.',
+},
+{
+  quote:
+  'Найцінніше в цій колаборації — це розуміння контексту. Команда Star&Unicorn та LoveElement знає, як працювати з чутливими темами в Україні сьогодні. Це інновації з людським обличчям.',
   name: 'Д-р Сара Оконкво',
   role: "експерт у сфері ментального здоров'я",
   initials: 'СО'
-}, {
-  quote: 'Вони не просто переробили наш бренд — вони допомогли нам сформулювати нашу цінність так, щоб вона резонувала. Кількість звернень зросла на 40% протягом трьох місяців після запуску нашої нової ідентичності.',
+},
+{
+  quote:
+  'Вони не просто переробили наш бренд — вони допомогли нам сформулювати нашу цінність так, щоб вона резонувала. Кількість звернень зросла на 40% протягом трьох місяців після запуску нашої нової ідентичності.',
   name: 'Д-р Джеймс Хартлі',
   role: 'Директор практики, Хартлі та Партнери',
   initials: 'ДХ'
 }];
+
 export function TestimonialsSectionUA() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -32,7 +34,9 @@ export function TestimonialsSectionUA() {
     if (!el) return;
     setCanScrollLeft(el.scrollLeft > 10);
     setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
-    const cardWidth = el.firstElementChild ? (el.firstElementChild as HTMLElement).offsetWidth + 24 : 400;
+    const cardWidth = el.firstElementChild ?
+    (el.firstElementChild as HTMLElement).offsetWidth + 24 :
+    400;
     setActiveIndex(Math.round(el.scrollLeft / cardWidth));
   };
   useEffect(() => {
@@ -47,63 +51,90 @@ export function TestimonialsSectionUA() {
   const scroll = (direction: 'left' | 'right') => {
     const el = scrollRef.current;
     if (!el) return;
-    const cardWidth = el.firstElementChild ? (el.firstElementChild as HTMLElement).offsetWidth + 24 : 400;
+    const cardWidth = el.firstElementChild ?
+    (el.firstElementChild as HTMLElement).offsetWidth + 24 :
+    400;
     el.scrollBy({
       left: direction === 'left' ? -cardWidth : cardWidth,
       behavior: 'smooth'
     });
   };
-  return <section className="py-24 md:py-32 bg-sage-100/30 relative overflow-hidden">
+  return (
+    <section className="py-24 md:py-32 bg-sage-100/30 relative overflow-hidden">
       {/* Subtle decorative element */}
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-sage-200/20 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-14 md:mb-16">
-          <motion.h2 initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} className="text-3xl md:text-5xl font-serif font-bold text-navy-500 mb-4">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14 md:mb-16">
+          <div>
+            <motion.h2
+              initial={{
+                opacity: 0,
+                y: 20
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0
+              }}
+              viewport={{
+                once: true
+              }}
+              className="text-3xl md:text-5xl font-serif font-bold text-navy-500 mb-4">
 
-            Досвід тих, хто вже з нами
-          </motion.h2>
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          delay: 0.1
-        }} className="text-lg text-navy-400 max-w-xl mb-8">
+              Досвід тих, хто вже з нами
+            </motion.h2>
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: 20
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0
+              }}
+              viewport={{
+                once: true
+              }}
+              transition={{
+                delay: 0.1
+              }}
+              className="text-lg text-navy-400 max-w-xl">
 
-            Ми вже допомагаємо професіоналам поєднувати етику терапії з
-            інноваціями.
-          </motion.p>
+              Ми вже допомагаємо професіоналам поєднувати етику терапії з
+              інноваціями.
+            </motion.p>
+          </div>
 
           {/* Navigation Arrows */}
-          <motion.div initial={{
-          opacity: 0
-        }} whileInView={{
-          opacity: 1
-        }} viewport={{
-          once: true
-        }} transition={{
-          delay: 0.2
-        }} className="hidden md:flex items-center gap-3">
+          <motion.div
+            initial={{
+              opacity: 0
+            }}
+            whileInView={{
+              opacity: 1
+            }}
+            viewport={{
+              once: true
+            }}
+            transition={{
+              delay: 0.2
+            }}
+            className="hidden md:flex items-center gap-3 mt-6 md:mt-0">
 
-            <button onClick={() => scroll('left')} disabled={!canScrollLeft} aria-label="Previous testimonial" className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 ${canScrollLeft ? 'border-navy-500/20 text-navy-500 hover:bg-navy-500 hover:text-white hover:border-navy-500' : 'border-navy-500/10 text-navy-500/20 cursor-not-allowed'}`}>
+            <button
+              onClick={() => scroll('left')}
+              disabled={!canScrollLeft}
+              aria-label="Previous testimonial"
+              className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 ${canScrollLeft ? 'border-navy-500/20 text-navy-500 hover:bg-navy-500 hover:text-white hover:border-navy-500' : 'border-navy-500/10 text-navy-500/20 cursor-not-allowed'}`}>
 
               <ChevronLeft size={20} />
             </button>
-            <button onClick={() => scroll('right')} disabled={!canScrollRight} aria-label="Next testimonial" className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 ${canScrollRight ? 'border-navy-500/20 text-navy-500 hover:bg-navy-500 hover:text-white hover:border-navy-500' : 'border-navy-500/10 text-navy-500/20 cursor-not-allowed'}`}>
+            <button
+              onClick={() => scroll('right')}
+              disabled={!canScrollRight}
+              aria-label="Next testimonial"
+              className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 ${canScrollRight ? 'border-navy-500/20 text-navy-500 hover:bg-navy-500 hover:text-white hover:border-navy-500' : 'border-navy-500/10 text-navy-500/20 cursor-not-allowed'}`}>
 
               <ChevronRight size={20} />
             </button>
@@ -111,26 +142,39 @@ export function TestimonialsSectionUA() {
         </div>
 
         {/* Horizontal Scroll Container */}
-        <div ref={scrollRef} className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{
-        scrollbarWidth: 'none',
-        msOverflowStyle: 'none'
-      }}>
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none'
+          }}>
 
-          {testimonials.map((testimonial, index) => <motion.div key={index} initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.5,
-          delay: index * 0.1
-        }} className="min-w-[320px] md:min-w-[420px] max-w-[420px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between">
+          {testimonials.map((testimonial, index) =>
+          <motion.div
+            key={index}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
+            viewport={{
+              once: true
+            }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.1
+            }}
+            className="min-w-[320px] md:min-w-[420px] max-w-[420px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between">
 
               <div>
-                <Quote size={32} className="text-sage-400/40 mb-6" strokeWidth={1.5} />
+                <Quote
+                size={32}
+                className="text-sage-400/40 mb-6"
+                strokeWidth={1.5} />
 
                 <p className="font-serif text-navy-500 text-lg md:text-xl leading-relaxed italic mb-8">
                   "{testimonial.quote}"
@@ -148,13 +192,20 @@ export function TestimonialsSectionUA() {
                   <p className="text-navy-400/70 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-            </motion.div>)}
+            </motion.div>
+          )}
         </div>
 
         {/* Dot Indicators (mobile) */}
         <div className="flex md:hidden justify-center gap-2 mt-6">
-          {testimonials.map((_, index) => <div key={index} className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'bg-sage-400 w-6' : 'bg-sage-400/25'}`} />)}
+          {testimonials.map((_, index) =>
+          <div
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'bg-sage-400 w-6' : 'bg-sage-400/25'}`} />
+
+          )}
         </div>
       </div>
-    </section>;
+    </section>);
+
 }
