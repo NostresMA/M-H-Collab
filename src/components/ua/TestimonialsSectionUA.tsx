@@ -158,6 +158,8 @@ export function TestimonialsSectionUA() {
               </div>
             </motion.div>
           ))}
+          {/* Spacer to prevent last card shadow clipping */}
+          <div className="min-w-[40px] md:min-w-[80px] h-px flex-shrink-0 invisible" aria-hidden="true" />
         </div>
 
         <div className="px-4 sm:px-6 lg:px-8 flex md:hidden justify-center gap-2 mt-6">

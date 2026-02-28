@@ -200,6 +200,8 @@ export function TestimonialsSection() {
               </div>
             </motion.div>
           )}
+          {/* Spacer to prevent last card shadow clipping */}
+          <div className="min-w-[40px] md:min-w-[80px] h-px flex-shrink-0 invisible" aria-hidden="true" />
         </div>
 
         {/* Dot Indicators (mobile) */}
