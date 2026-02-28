@@ -77,8 +77,8 @@ export function TestimonialsSectionUA() {
     <section className="py-24 md:py-32 bg-sage-100/30 relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-sage-200/20 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-center text-center mb-14 md:mb-16">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center mb-14 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ export function TestimonialsSectionUA() {
 
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto py-10 snap-x snap-mandatory scrollbar-hide"
+          className="flex gap-6 overflow-x-auto py-10 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {testimonials.map((testimonial, index) => (
@@ -160,7 +160,7 @@ export function TestimonialsSectionUA() {
           ))}
         </div>
 
-        <div className="flex md:hidden justify-center gap-2 mt-6">
+        <div className="px-4 sm:px-6 lg:px-8 flex md:hidden justify-center gap-2 mt-6">
           {testimonials.map((_, index) => (
             <div
               key={index}
