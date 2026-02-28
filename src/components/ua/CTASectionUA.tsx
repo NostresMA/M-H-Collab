@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { trackBookingClick } from '../../services/tracking';
 export function CTASectionUA() {
   return (

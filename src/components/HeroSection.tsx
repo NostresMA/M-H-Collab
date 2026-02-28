@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Sparkles, Clock, Heart, Mail, Table2 } from 'lucide-react';
 import { trackBookingClick } from '../services/tracking';
+
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20 lg:pt-0">
