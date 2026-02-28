@@ -151,7 +151,7 @@ export function TestimonialsSection() {
         {/* Horizontal Scroll Container */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+          className="flex gap-6 overflow-x-auto py-10 snap-x snap-mandatory scrollbar-hide"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
