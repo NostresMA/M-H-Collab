@@ -46,7 +46,7 @@ export function TestimonialsSectionUA() {
     setCanScrollLeft(el.scrollLeft > 10);
     setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
     const cardWidth = el.firstElementChild ?
-      (el.firstElementChild as HTMLElement).offsetWidth + 24 :
+      (el.firstElementChild as HTMLElement).offsetWidth + 48 :
       400;
     setActiveIndex(Math.round(el.scrollLeft / cardWidth));
   };
@@ -65,7 +65,7 @@ export function TestimonialsSectionUA() {
     const el = scrollRef.current;
     if (!el) return;
     const cardWidth = el.firstElementChild ?
-      (el.firstElementChild as HTMLElement).offsetWidth + 24 :
+      (el.firstElementChild as HTMLElement).offsetWidth + 48 :
       400;
     el.scrollBy({
       left: direction === 'left' ? -cardWidth : cardWidth,
@@ -125,7 +125,7 @@ export function TestimonialsSectionUA() {
 
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto py-10 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory scrollbar-hide"
+          className="flex gap-12 overflow-x-auto py-10 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {testimonials.map((testimonial, index) => (
@@ -136,7 +136,7 @@ export function TestimonialsSectionUA() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               onClick={() => testimonial.quote.length > 200 && setSelectedTestimonial(testimonial)}
-              className={`min-w-[320px] md:min-w-[420px] max-w-[420px] h-[400px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between transition-all duration-300 ${testimonial.quote.length > 200 ? 'cursor-pointer hover:bg-white/40 hover:shadow-xl hover:-translate-y-1' : ''}`}
+              className={`min-w-[320px] md:min-w-[420px] max-w-[420px] h-[400px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between transition-all duration-300 relative hover:z-10 ${testimonial.quote.length > 200 ? 'cursor-pointer hover:bg-white/40 hover:shadow-xl hover:-translate-y-1' : ''}`}
             >
               <div className="flex-1 overflow-hidden">
                 <Quote size={32} className="text-sage-400/40 mb-6" strokeWidth={1.5} />

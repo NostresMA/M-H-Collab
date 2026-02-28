@@ -59,7 +59,7 @@ export function TestimonialsSection() {
     const el = scrollRef.current;
     if (!el) return;
     const cardWidth = el.firstElementChild ?
-      (el.firstElementChild as HTMLElement).offsetWidth + 24 :
+      (el.firstElementChild as HTMLElement).offsetWidth + 48 :
       400;
     el.scrollBy({
       left: direction === 'left' ? -cardWidth : cardWidth,
@@ -150,7 +150,7 @@ export function TestimonialsSection() {
         {/* Horizontal Scroll Container */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto py-10 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory scrollbar-hide"
+          className="flex gap-12 overflow-x-auto py-10 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory scrollbar-hide"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
@@ -174,7 +174,7 @@ export function TestimonialsSection() {
                 duration: 0.5,
                 delay: index * 0.1
               }}
-              className="min-w-[320px] md:min-w-[420px] max-w-[420px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between">
+              className="min-w-[320px] md:min-w-[420px] max-w-[420px] flex-shrink-0 snap-start glass p-8 md:p-10 rounded-glass flex flex-col justify-between relative hover:z-10 transition-all duration-300 hover:bg-white/40 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
 
               <div>
                 <Quote
